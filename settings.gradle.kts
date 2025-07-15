@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "ShiftTestTask"
 include(":app")
- 
+include(":data")

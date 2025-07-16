@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ShiftTestTask</string>
+    <string name="cd_user_image">User image</string>
 </resources>

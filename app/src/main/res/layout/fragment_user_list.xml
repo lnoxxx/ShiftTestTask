@@ -5,9 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".userListFragment.UserListFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUserList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_user" />
 
 </FrameLayout>

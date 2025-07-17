@@ -1,4 +1,4 @@
-package com.top.shiftestask.userListFragment
+package com.top.shiftestask.userListFragment.models
 
 data class UserListUiState(
     val users: List<UserItemUiState> = listOf(),
@@ -17,7 +17,11 @@ data class NameUiState(
     val title: String,
     val first: String,
     val last: String,
-)
+) {
+    override fun toString(): String {
+        return "$title $first $last"
+    }
+}
 
 data class LocationUiState(
     val streetName: String,
@@ -26,10 +30,18 @@ data class LocationUiState(
     val state: String,
     val country: String,
     val postcode: String,
-)
+) {
+    override fun toString(): String {
+        return "$country, $state, $city, $streetName $streetNumber, $postcode"
+    }
+}
 
 data class PictureUiState(
     val large: String,
     val medium: String,
     val thumbnail: String,
 )
+
+enum class UpdateErrorUiState {
+    SERVER_ERROR, NETWORK_ERROR, UNKNOWN_ERROR,
+}

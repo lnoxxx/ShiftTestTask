@@ -1,4 +1,4 @@
-package com.top.shiftestask.userListFragment
+package com.top.shiftestask.userListFragment.models
 
 import com.top.data.randomUser.models.Location
 import com.top.data.randomUser.models.Name

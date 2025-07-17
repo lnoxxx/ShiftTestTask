@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ShiftTestTask</string>
+
+    <string name="error_server">Server error, please try again later.</string>
+    <string name="error_network">Please check your internet connection.</string>
+    <string name="error_unknown">Unknown error, please contact the developer.</string>
+
     <string name="cd_user_image">User image</string>
+    <string name="title_fragment_user_list">List of users</string>
 </resources>

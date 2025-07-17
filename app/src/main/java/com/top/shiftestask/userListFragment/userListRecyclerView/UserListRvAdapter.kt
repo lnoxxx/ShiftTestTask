@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.top.shiftestask.R
-import com.top.shiftestask.userListFragment.UserItemUiState
+import com.top.shiftestask.userListFragment.models.UserItemUiState
 
 class UserListRvAdapter : RecyclerView.Adapter<UserViewHolder>() {
     private val userList = mutableListOf<UserItemUiState>()

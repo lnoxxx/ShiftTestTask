@@ -1,7 +1,7 @@
 package com.top.shiftestask.userListFragment.userListRecyclerView
 
 import androidx.recyclerview.widget.DiffUtil
-import com.top.shiftestask.userListFragment.UserItemUiState
+import com.top.shiftestask.userListFragment.models.UserItemUiState
 
 class UserListRvDiffUtil(
     private val oldUserList: List<UserItemUiState>,

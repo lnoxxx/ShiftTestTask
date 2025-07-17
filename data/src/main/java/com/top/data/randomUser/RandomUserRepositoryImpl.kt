@@ -34,10 +34,10 @@ class RandomUserRepositoryImpl(
                 UpdateUsersResult.SERVER_ERROR
             }
         } catch (e: IOException) {
-            Log.e("RandomUserRepository", e.message.toString())
+            Log.e("RandomUserRepository (IO)", e.toString())
             UpdateUsersResult.NETWORK_ERROR
         } catch (e: Exception) {
-            Log.e("RandomUserRepository", e.message.toString())
+            Log.e("RandomUserRepository (Unknown)", e.toString())
             UpdateUsersResult.UNKNOWN_ERROR
         }
     }

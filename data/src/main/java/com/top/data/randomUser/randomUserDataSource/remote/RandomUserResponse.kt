@@ -85,7 +85,7 @@ data class RegisteredNetwork(
 @Serializable
 data class IdNetwork(
     val name: String,
-    val value: String,
+    val value: String?,
 )
 
 @Serializable

@@ -33,7 +33,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:clipToPadding="false"
-            android:scrollbars="vertical"
             tools:ignore="SpeakableTextPresentCheck"
             tools:itemCount="4"
             tools:listitem="@layout/item_user" />

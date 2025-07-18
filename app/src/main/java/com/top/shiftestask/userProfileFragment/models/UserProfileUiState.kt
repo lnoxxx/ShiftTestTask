@@ -6,19 +6,21 @@ import com.top.shiftestask.userListFragment.models.NameUiState
 import com.top.shiftestask.userListFragment.models.PictureUiState
 
 data class UserProfileUiState(
-    val name: NameUiState,
-    val picture: PictureUiState,
-    val gender: GenderUiState,
-    val username: String,
     val infoItems: List<UserProfileInfoItem>
 )
 
-enum class GenderUiState {
-    MALE, FEMALE, OTHER,
-}
-
 sealed interface UserProfileInfoItem {
-    data class Title(@StringRes val text: Int) : UserProfileInfoItem
+    data class Header(
+        val name: NameUiState,
+        val picture: PictureUiState,
+        val gender: GenderUiState,
+        val login: String,
+    ) : UserProfileInfoItem
+
+    data class Title(
+        @StringRes val text: Int
+    ) : UserProfileInfoItem
+
     data class Info(
         @DrawableRes val icon: Int,
         @StringRes val title: Int,
@@ -27,6 +29,14 @@ sealed interface UserProfileInfoItem {
     ) : UserProfileInfoItem
 }
 
+enum class GenderUiState {
+    MALE, FEMALE, OTHER,
+}
+
 enum class UserProfileInfoItemPosition {
     FIRST, LAST, DEFAULT
+}
+
+enum class LoadUserDataErrorUiState{
+    NOT_FOUND, UNKNOWN
 }

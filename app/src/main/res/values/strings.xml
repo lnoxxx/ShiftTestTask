@@ -5,6 +5,9 @@
     <string name="error_network">Please check your internet connection.</string>
     <string name="error_unknown">Unknown error, please contact the developer.</string>
 
+    <string name="error_user_not_found">User not found.</string>
+    <string name="error_user_unknown">Unknown error.</string>
+
     <string name="cd_user_image">User image</string>
     <string name="cd_info_icon">Info icon</string>
 
@@ -22,4 +25,5 @@
     <string name="title_user_info_cell">Call</string>
     <string name="title_user_info_uuid">Uuid</string>
     <string name="title_user_info_dor">Date of registration</string>
+    <string name="cd_back">Back</string>
 </resources>

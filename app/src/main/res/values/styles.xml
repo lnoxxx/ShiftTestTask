@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--    CardView-->
-
     <style name="App.CardView" parent="Widget.Material3.CardView.Filled">
         <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
     </style>
 
     <style name="App.CardView.Image">
         <item name="cardCornerRadius">@dimen/circle_card_corner_radius</item>
+    </style>
+
+    <style name="App.CardView.Elevated" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">@dimen/default_card_corner_radius</item>
     </style>
 
 </resources>

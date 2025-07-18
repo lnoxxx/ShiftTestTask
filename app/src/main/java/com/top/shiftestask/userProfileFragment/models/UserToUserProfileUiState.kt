@@ -9,6 +9,12 @@ import com.top.shiftestask.userListFragment.models.toPictureUiState
 fun User.toUserProfileUiState(): UserProfileUiState {
     val titleContacts = UserProfileInfoItem.Title(R.string.title_user_info_contacts)
     val titleOther = UserProfileInfoItem.Title(R.string.title_user_info_other)
+    val header = UserProfileInfoItem.Header(
+        name = this.name.toNameUiState(),
+        picture = this.picture.toPictureUiState(),
+        gender = genderToGenderUiState(this.gender),
+        login = "@${this.login.username}",
+    )
     val age = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_age,
         title = R.string.title_user_info_age,
@@ -56,15 +62,9 @@ fun User.toUserProfileUiState(): UserProfileUiState {
         position = UserProfileInfoItemPosition.LAST
     )
     val infoItems = listOf(
-        age, dob, location, titleContacts, email, phone, cell, titleOther, uuid, dor, dor, dor, dor, dor, dor, dor,dor
+        header, age, dob, location, titleContacts, email, phone, cell, titleOther, uuid, dor
     )
-    return UserProfileUiState(
-        name = this.name.toNameUiState(),
-        picture = this.picture.toPictureUiState(),
-        gender = genderToGenderUiState(this.gender),
-        username = "@${this.login.username}",
-        infoItems = infoItems
-    )
+    return UserProfileUiState(infoItems = infoItems)
 }
 
 fun genderToGenderUiState(gender: String): GenderUiState {

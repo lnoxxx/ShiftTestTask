@@ -42,9 +42,9 @@ class RandomUserRepositoryImpl(
         }
     }
 
-    override suspend fun getUserById(userId: Int): User {
+    override suspend fun getUserById(userId: Int): User? {
         return withContext(Dispatchers.IO) {
-            randomUserDao.getUserById(userId).toUser()
+            randomUserDao.getUserById(userId)?.toUser()
         }
     }
 

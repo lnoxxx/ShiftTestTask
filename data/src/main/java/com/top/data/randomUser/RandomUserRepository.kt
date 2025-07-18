@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 interface RandomUserRepository {
     val users: Flow<List<User>>
     suspend fun updateUsers(userCount: Int = DEFAULT_USER_COUNT): UpdateUsersResult
-    suspend fun getUserById(userId: Int): User
+    suspend fun getUserById(userId: Int): User?
 
     companion object {
         const val DEFAULT_USER_COUNT = 30

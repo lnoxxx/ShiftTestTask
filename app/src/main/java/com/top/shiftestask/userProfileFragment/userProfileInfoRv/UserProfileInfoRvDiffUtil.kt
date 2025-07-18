@@ -20,6 +20,9 @@ class UserProfileInfoRvDiffUtil(
         if (newItem is UserProfileInfoItem.Info && oldItem is UserProfileInfoItem.Info) {
             return oldItem.title == newItem.title
         }
+        if (newItem is UserProfileInfoItem.Header && oldItem is UserProfileInfoItem.Header) {
+            return newItem.login == oldItem.login
+        }
         return false
     }
 

@@ -40,4 +40,5 @@
         app:layout_constraintStart_toEndOf="@id/ivInfoIcon"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         tools:text="United States, Michigan, Billings, Valwood Pkwy 8929" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

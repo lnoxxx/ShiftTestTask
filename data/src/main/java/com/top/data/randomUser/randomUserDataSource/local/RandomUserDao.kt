@@ -19,7 +19,7 @@ interface RandomUserDao {
     suspend fun clearAllUsers()
 
     @Query("SELECT * FROM users WHERE id = :userId")
-    suspend fun getUserById(userId: Int): RandomUserEntity
+    suspend fun getUserById(userId: Int): RandomUserEntity?
 
     @Transaction
     suspend fun insertAndClearUsers(users: List<RandomUserEntity>) {

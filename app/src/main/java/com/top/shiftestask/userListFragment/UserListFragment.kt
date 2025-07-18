@@ -11,6 +11,7 @@ import androidx.core.view.updatePadding
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.top.shiftestask.R
@@ -19,11 +20,12 @@ import com.top.shiftestask.userListFragment.models.UpdateErrorUiState
 import com.top.shiftestask.userListFragment.models.UserListUiState
 import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvAdapter
 import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvItemDecorator
+import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvListener
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class UserListFragment : Fragment() {
+class UserListFragment : Fragment(), UserListRvListener {
 
     private var _binding: FragmentUserListBinding? = null
     private val binding
@@ -31,7 +33,7 @@ class UserListFragment : Fragment() {
 
     private val viewModel: UserListViewModel by viewModels()
 
-    private val usersAdapter = UserListRvAdapter()
+    private val usersAdapter = UserListRvAdapter(this)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -85,5 +87,10 @@ class UserListFragment : Fragment() {
             UpdateErrorUiState.UNKNOWN_ERROR -> R.string.error_unknown
         }
         Snackbar.make(binding.clMain, textRes, Snackbar.LENGTH_LONG).show()
+    }
+
+    override fun onClickUser(localId: Int) {
+        val action = UserListFragmentDirections.actionUserListFragmentToUserProfileFragment(localId)
+        findNavController().navigate(action)
     }
 }

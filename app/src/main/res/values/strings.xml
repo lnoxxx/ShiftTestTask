@@ -6,5 +6,20 @@
     <string name="error_unknown">Unknown error, please contact the developer.</string>
 
     <string name="cd_user_image">User image</string>
+    <string name="cd_info_icon">Info icon</string>
+
     <string name="title_fragment_user_list">List of users</string>
+
+    <string name="title_user_info_main">Main</string>
+    <string name="title_user_info_contacts">Contacts</string>
+    <string name="title_user_info_other">Other</string>
+
+    <string name="title_user_info_age">Age</string>
+    <string name="title_user_info_dob">Birthday</string>
+    <string name="title_user_info_location">Location</string>
+    <string name="title_user_info_email">Email</string>
+    <string name="title_user_info_phone">Phone</string>
+    <string name="title_user_info_cell">Call</string>
+    <string name="title_user_info_uuid">Uuid</string>
+    <string name="title_user_info_dor">Date of registration</string>
 </resources>

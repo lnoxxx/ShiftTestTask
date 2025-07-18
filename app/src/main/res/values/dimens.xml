@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="default_card_corner_radius">24dp</dimen>
+    <dimen name="small_card_corner_radius">8dp</dimen>
     <dimen name="circle_card_corner_radius">64dp</dimen>
 
     <dimen name="margin_user_item">8dp</dimen>
+    <dimen name="margin_user_info_item_horizontal">8dp</dimen>
+    <dimen name="margin_user_info_item_vertical">4dp</dimen>
 </resources>

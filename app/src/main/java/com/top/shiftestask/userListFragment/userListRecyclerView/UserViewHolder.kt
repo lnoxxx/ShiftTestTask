@@ -8,12 +8,15 @@ import com.top.shiftestask.userListFragment.models.UserItemUiState
 
 class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ItemUserBinding.bind(view)
-    fun bind(user: UserItemUiState) {
+    fun bind(user: UserItemUiState, listener: UserListRvListener) {
         Picasso.get().load(user.picture.medium).into(binding.imvUserImage)
         with(binding) {
             tvUserName.text = user.name.toString()
             tvUserPhoneNumber.text = user.cell
             tvUserAddress.text = user.location.toString()
+            cvMain.setOnClickListener {
+                listener.onClickUser(user.localId)
+            }
         }
     }
 }

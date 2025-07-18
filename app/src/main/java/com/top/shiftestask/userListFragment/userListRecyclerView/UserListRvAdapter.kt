@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.top.shiftestask.R
 import com.top.shiftestask.userListFragment.models.UserItemUiState
 
-class UserListRvAdapter : RecyclerView.Adapter<UserViewHolder>() {
+class UserListRvAdapter(
+    private val listener: UserListRvListener
+) : RecyclerView.Adapter<UserViewHolder>() {
     private val userList = mutableListOf<UserItemUiState>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -19,7 +21,7 @@ class UserListRvAdapter : RecyclerView.Adapter<UserViewHolder>() {
     override fun getItemCount(): Int = userList.size
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        holder.bind(userList[position])
+        holder.bind(userList[position], listener)
     }
 
     fun updateUserList(newUsers: List<UserItemUiState>) {

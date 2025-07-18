@@ -9,13 +9,13 @@ material = "1.12.0"
 kotlinxSerializationJson = "1.7.3"
 activity = "1.10.1"
 hilt = "2.51.1"
-navigationFragmentKtx = "2.9.1"
+navigationFragmentKtx = "2.9.2"
 okhttp = "4.12.0"
 constraintlayout = "2.2.1"
 picasso = "2.8"
 roomRuntime = "2.7.2"
 retrofit = "3.0.0"
-lifecycleViewmodelKtx = "2.9.1"
+lifecycleViewmodelKtx = "2.9.2"
 fragmentKtx = "1.8.8"
 swiperefreshlayout = "1.2.0-beta01"
 
@@ -23,6 +23,7 @@ swiperefreshlayout = "1.2.0-beta01"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-safe-args-gradle-plugin = { module = "androidx.navigation:navigation-safe-args-gradle-plugin", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
 androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }

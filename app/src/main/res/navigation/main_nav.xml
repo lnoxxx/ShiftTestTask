@@ -18,5 +18,9 @@
         android:id="@+id/userProfileFragment"
         android:name="com.top.shiftestask.userProfileFragment.UserProfileFragment"
         android:label="fragment_user_profile"
-        tools:layout="@layout/fragment_user_profile" />
+        tools:layout="@layout/fragment_user_profile" >
+        <argument
+            android:name="localId"
+            app:argType="integer" />
+    </fragment>
 </navigation>

@@ -6,6 +6,9 @@
     <string name="error_unknown">Unknown error, please contact the developer</string>
     <string name="error_user_not_found">User not found</string>
     <string name="error_user_unknown">Unknown error</string>
+    <string name="error_open_email">Failed to open email app</string>
+    <string name="error_open_dialer">Failed to open dialer app</string>
+    <string name="error_open_maps">Failed to open maps application</string>
 
     <string name="cd_user_image">User image</string>
     <string name="cd_info_icon">Info icon</string>

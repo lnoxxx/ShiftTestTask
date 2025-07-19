@@ -11,7 +11,9 @@ import com.top.shiftestask.userProfileFragment.userProfileInfoRv.viewHolders.Use
 import com.top.shiftestask.userProfileFragment.userProfileInfoRv.viewHolders.UserInfoTitleViewHolder
 import com.top.shiftestask.userProfileFragment.userProfileInfoRv.viewHolders.UserInfoViewHolder
 
-class UserProfileInfoRvAdapter : RecyclerView.Adapter<ViewHolder>() {
+class UserProfileInfoRvAdapter(
+    private val listener: UserProfileInfoRvListener
+) : RecyclerView.Adapter<ViewHolder>() {
     private val infoList = mutableListOf<UserProfileInfoItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -39,7 +41,7 @@ class UserProfileInfoRvAdapter : RecyclerView.Adapter<ViewHolder>() {
         val item = infoList[position]
         when (holder) {
             is UserInfoTitleViewHolder -> holder.bind(item as UserProfileInfoItem.Title)
-            is UserInfoViewHolder -> holder.bind(item as UserProfileInfoItem.Info)
+            is UserInfoViewHolder -> holder.bind(item as UserProfileInfoItem.Info, listener)
             is UserInfoHeaderViewHolder -> holder.bind(item as UserProfileInfoItem.Header)
         }
     }

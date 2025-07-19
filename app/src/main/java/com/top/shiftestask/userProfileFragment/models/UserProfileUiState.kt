@@ -27,6 +27,7 @@ sealed interface UserProfileInfoItem {
         @StringRes val title: Int,
         val text: String,
         val position: UserProfileInfoItemPosition = UserProfileInfoItemPosition.DEFAULT,
+        val implicitIntentType: ImplicitIntentType = ImplicitIntentType.NONE
     ) : UserProfileInfoItem
 }
 
@@ -40,4 +41,8 @@ enum class UserProfileInfoItemPosition {
 
 enum class LoadUserDataErrorUiState {
     NOT_FOUND, UNKNOWN
+}
+
+enum class ImplicitIntentType {
+    EMAIL, MAPS, TEL, NONE
 }

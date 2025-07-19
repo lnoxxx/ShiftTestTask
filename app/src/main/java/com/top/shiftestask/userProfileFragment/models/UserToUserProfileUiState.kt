@@ -32,24 +32,28 @@ fun User.toUserProfileUiState(): UserProfileUiState {
         icon = R.drawable.ic_info_location,
         title = R.string.title_user_info_location,
         text = this.location.toLocationUiState().toString(),
-        position = UserProfileInfoItemPosition.LAST
+        position = UserProfileInfoItemPosition.LAST,
+        implicitIntentType = ImplicitIntentType.MAPS
     )
     val email = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_emali,
         title = R.string.title_user_info_email,
         text = this.email,
-        position = UserProfileInfoItemPosition.FIRST
+        position = UserProfileInfoItemPosition.FIRST,
+        implicitIntentType = ImplicitIntentType.EMAIL
     )
     val phone = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_phone,
         title = R.string.title_user_info_phone,
         text = this.phone,
+        implicitIntentType = ImplicitIntentType.TEL
     )
     val cell = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_cell,
         title = R.string.title_user_info_cell,
         text = this.cell,
-        position = UserProfileInfoItemPosition.LAST
+        position = UserProfileInfoItemPosition.LAST,
+        implicitIntentType = ImplicitIntentType.TEL
     )
     val uuid = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_uuid,

@@ -15,6 +15,7 @@ sealed interface UserProfileInfoItem {
         val picture: PictureUiState,
         val gender: GenderUiState,
         val login: String,
+        val localId: Int,
     ) : UserProfileInfoItem
 
     data class Title(
@@ -37,6 +38,6 @@ enum class UserProfileInfoItemPosition {
     FIRST, LAST, DEFAULT
 }
 
-enum class LoadUserDataErrorUiState{
+enum class LoadUserDataErrorUiState {
     NOT_FOUND, UNKNOWN
 }

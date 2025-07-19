@@ -11,6 +11,7 @@ import androidx.core.view.updatePadding
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.FragmentNavigator
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -21,6 +22,7 @@ import com.top.shiftestask.userListFragment.models.UserListUiState
 import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvAdapter
 import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvItemDecorator
 import com.top.shiftestask.userListFragment.userListRecyclerView.UserListRvListener
+import com.top.shiftestask.utils.getImageTransitionName
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -89,8 +91,14 @@ class UserListFragment : Fragment(), UserListRvListener {
         Snackbar.make(binding.clMain, textRes, Snackbar.LENGTH_LONG).show()
     }
 
-    override fun onClickUser(localId: Int) {
+    override fun onClickUser(localId: Int, imageView: View) {
+        val imageTransitionName = getImageTransitionName(localId)
+        imageView.transitionName = imageTransitionName
+        val extras =
+            FragmentNavigator.Extras.Builder()
+                .addSharedElement(imageView, imageTransitionName)
+                .build()
         val action = UserListFragmentDirections.actionUserListFragmentToUserProfileFragment(localId)
-        findNavController().navigate(action)
+        findNavController().navigate(action, extras)
     }
 }

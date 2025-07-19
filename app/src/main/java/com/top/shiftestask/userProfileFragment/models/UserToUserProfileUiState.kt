@@ -5,6 +5,7 @@ import com.top.shiftestask.R
 import com.top.shiftestask.userListFragment.models.toLocationUiState
 import com.top.shiftestask.userListFragment.models.toNameUiState
 import com.top.shiftestask.userListFragment.models.toPictureUiState
+import com.top.shiftestask.utils.isoToDmy
 
 fun User.toUserProfileUiState(): UserProfileUiState {
     val titleContacts = UserProfileInfoItem.Title(R.string.title_user_info_contacts)
@@ -14,6 +15,7 @@ fun User.toUserProfileUiState(): UserProfileUiState {
         picture = this.picture.toPictureUiState(),
         gender = genderToGenderUiState(this.gender),
         login = "@${this.login.username}",
+        localId = this.localId
     )
     val age = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_age,
@@ -24,7 +26,7 @@ fun User.toUserProfileUiState(): UserProfileUiState {
     val dob = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_dob,
         title = R.string.title_user_info_dob,
-        text = this.dob.date,
+        text = isoToDmy(this.dob.date),
     )
     val location = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_location,
@@ -58,7 +60,7 @@ fun User.toUserProfileUiState(): UserProfileUiState {
     val dor = UserProfileInfoItem.Info(
         icon = R.drawable.ic_info_dor,
         title = R.string.title_user_info_dor,
-        text = this.registered.date,
+        text = isoToDmy(this.registered.date),
         position = UserProfileInfoItemPosition.LAST
     )
     val infoItems = listOf(

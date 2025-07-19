@@ -7,4 +7,4 @@
     android:paddingHorizontal="16dp"
     android:paddingVertical="8dp"
     android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-    tools:text="Contact" />
+    tools:text="Title" />

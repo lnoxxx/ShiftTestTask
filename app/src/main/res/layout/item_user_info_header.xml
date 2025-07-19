@@ -6,25 +6,17 @@
     android:layout_height="wrap_content"
     android:padding="16dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cvUserImage"
-        style="@style/App.CardView.Image"
+    <ImageView
+        android:id="@+id/imvUserImage"
         android:layout_width="128dp"
         android:layout_height="128dp"
+        android:contentDescription="@string/cd_user_image"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imvUserImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:contentDescription="@string/cd_user_image"
-            android:scaleType="centerCrop"
-            tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@tools:sample/avatars" />
-
-    </com.google.android.material.card.MaterialCardView>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvUserName"
@@ -35,7 +27,7 @@
         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cvUserImage"
+        app:layout_constraintTop_toBottomOf="@id/imvUserImage"
         tools:text="Miss Jennie Nichols" />
 
     <TextView
@@ -49,5 +41,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvUserName"
         tools:text="yellowpeacock117" />
+
+    <ImageView
+        android:id="@+id/imvGender"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@string/cd_gender"
+        app:layout_constraintBottom_toBottomOf="@id/tvUserLogin"
+        app:layout_constraintStart_toEndOf="@id/tvUserLogin"
+        tools:srcCompat="@drawable/ic_info_gender_female" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

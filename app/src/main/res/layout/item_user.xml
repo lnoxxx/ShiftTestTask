@@ -10,25 +10,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:padding="16dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cvUserImage"
-            style="@style/App.CardView.Image"
+        <ImageView
+            android:id="@+id/imvUserImage"
             android:layout_width="52dp"
             android:layout_height="52dp"
+            android:contentDescription="@string/cd_user_image"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/imvUserImage"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="@string/cd_user_image"
-                android:scaleType="centerCrop"
-                tools:ignore="ImageContrastCheck"
-                tools:srcCompat="@tools:sample/avatars" />
-        </com.google.android.material.card.MaterialCardView>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tvUserName"
@@ -39,7 +32,7 @@
             android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
             app:layout_constraintBottom_toTopOf="@id/tvUserPhoneNumber"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/cvUserImage"
+            app:layout_constraintStart_toEndOf="@id/imvUserImage"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Miss Jennie Nichols" />
 
@@ -51,7 +44,7 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
             app:drawableStartCompat="@drawable/ic_call"
-            app:layout_constraintBottom_toBottomOf="@+id/cvUserImage"
+            app:layout_constraintBottom_toBottomOf="@+id/imvUserImage"
             app:layout_constraintEnd_toEndOf="@id/tvUserName"
             app:layout_constraintStart_toStartOf="@id/tvUserName"
             app:layout_constraintTop_toBottomOf="@id/tvUserName"
@@ -67,7 +60,7 @@
             app:drawableStartCompat="@drawable/ic_location"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cvUserImage"
+            app:layout_constraintTop_toBottomOf="@id/imvUserImage"
             tools:text="United States, Michigan, Billings, Valwood Pkwy 8929" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

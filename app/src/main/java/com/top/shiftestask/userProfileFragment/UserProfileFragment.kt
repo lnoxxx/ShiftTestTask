@@ -21,6 +21,8 @@ import com.top.shiftestask.userProfileFragment.models.LoadUserDataErrorUiState
 import com.top.shiftestask.userProfileFragment.models.UserProfileUiState
 import com.top.shiftestask.userProfileFragment.userProfileInfoRv.UserProfileInfoRvAdapter
 import com.top.shiftestask.userProfileFragment.userProfileInfoRv.UserProfileInfoRvItemDecoration
+import com.top.shiftestask.utils.applyDefaultExitEnterTransition
+import com.top.shiftestask.utils.applyDefaultSharedElementTransition
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -47,6 +49,9 @@ class UserProfileFragment : Fragment() {
     ): View {
         _binding = FragmentUserProfileBinding.inflate(inflater)
         initRecyclerView()
+        postponeEnterTransition()
+        applyDefaultSharedElementTransition()
+        applyDefaultExitEnterTransition()
         return binding.root
     }
 
@@ -100,5 +105,6 @@ class UserProfileFragment : Fragment() {
 
     private fun bindUiState(state: UserProfileUiState) {
         infoAdapter.updateInfo(state.infoItems)
+        startPostponedEnterTransition()
     }
 }

@@ -14,7 +14,7 @@ class UserInfoHeaderViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ItemUserInfoHeaderBinding.bind(view)
     fun bind(header: UserProfileInfoItem.Header) {
         Picasso.get()
-            .load(header.picture.medium)
+            .load(header.picture.large)
             .transform(CircleTransformation())
             .into(binding.imvUserImage)
         val genderRes = when (header.gender) {

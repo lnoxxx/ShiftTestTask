@@ -11,7 +11,7 @@ class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val binding = ItemUserBinding.bind(view)
     fun bind(user: UserItemUiState, listener: UserListRvListener) {
         Picasso.get()
-            .load(user.picture.medium)
+            .load(user.picture.large)
             .transform(CircleTransformation())
             .into(binding.imvUserImage)
         with(binding) {

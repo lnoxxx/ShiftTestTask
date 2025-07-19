@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_server">Ошибка сервера, попробуйте позже</string>
+    <string name="error_network">Проверьте подключение к Интернету</string>
+    <string name="error_unknown">Неизвестная ошибка, свяжитесь с разработчиком</string>
+    <string name="error_user_not_found">Пользователь не найден</string>
+    <string name="error_user_unknown">Неизвестная ошибка</string>
+    <string name="error_open_email">Не удалось открыть приложение электронной почты</string>
+    <string name="error_open_dialer">Не удалось открыть приложение для набора номера</string>
+    <string name="error_open_maps">Не удалось открыть приложение «Карты»</string>
+
+    <string name="cd_user_image">Изображение пользователя</string>
+    <string name="cd_info_icon">Иконка</string>
+    <string name="cd_back">Назад</string>
+    <string name="cd_gender">Иконка пола</string>
+
+    <string name="title_fragment_user_list">Список пользователей</string>
+
+    <string name="title_user_info_contacts">Контакты</string>
+    <string name="title_user_info_other">Другое</string>
+    <string name="title_user_info_age">Возраст</string>
+    <string name="title_user_info_dob">День рождения</string>
+    <string name="title_user_info_location">Расположение</string>
+    <string name="title_user_info_email">Электронная почта</string>
+    <string name="title_user_info_phone">Домашний телефон</string>
+    <string name="title_user_info_cell">Мобильный телефон</string>
+    <string name="title_user_info_dor">Дата регистрации</string>
+</resources>
